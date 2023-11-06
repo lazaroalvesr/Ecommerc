@@ -3,14 +3,6 @@ import Product from "./components/Product";
 import Stripe from "stripe";
 
 async function getProducts(): Promise<ProductType[]> {
-  // const res = await fetch('https://fakestoreapi.com/products')
-
-  // if (!res.ok) {
-
-  //   throw new Error('falhou')
-  // }
-  // return res.json()
-
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
     apiVersion: '2023-10-16',
   });
